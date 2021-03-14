@@ -1,0 +1,32 @@
+#include<stdio.h>
+main()
+{
+	int choice;
+	//getting a random choice from the user
+	printf("Enter a random number between 1 and 6");
+	scanf("%d",&choice);
+	//decision making with menu
+	switch(choice)
+	{
+		case 1:
+			printf("Today you have chosen your meal to be Chicken Biriyani - Rs.199! Enjoy your meal");
+			break;
+		case 2:
+			printf("Today you have chosen to eat Schezwan fried rice - Rs.149! Enjoy your meal");
+			break;
+		case 3:
+			printf("Today your destined food item is Hamburger - Rs.99! Enjoy your meal");
+			break;
+		case 4:
+			printf("Today your random choice shows that your food item is Chappathi with chicken curry - Rs.139! Enjoy your meal");
+			break;
+		case 5:
+			printf("Today you have chosen your food item to be Pizza - Rs.249! Enjoy your meal");
+			break;
+		case 6:
+			printf("Today you chosen your meal to be Dosa - Rs.99! Enjoy your meal");
+			break;
+		default:
+			printf("Choose a number between 1 and 6. Thank you!");
+	}
+}
