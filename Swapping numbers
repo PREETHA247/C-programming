@@ -1,14 +1,36 @@
-#include<stdio.h>
+#include <stdio.h>
+int prime(int,int);
 main()
 {
-int a,b,s;
-printf("Enter the first number");
-scanf("%d",&a);
-printf("Enter the second number");
-scanf("%d",&b);
-s=a;
-a=b;
-b=s;
-printf("Swapped numbers\nfirst number = %d\n",a);
-printf("second number = %d",b);
+    int n,t;
+    printf("Enter a number");
+    scanf("%d",&n);
+    t=prime(n,n/2);
+    if (t == 1)
+    {
+        printf("%d is a prime number\n", n);
+    }
+    else
+    {
+        printf("%d is not a prime number\n", n);
+    }
+    return 0;
+}
+int prime(int n,int i)
+{
+    if(i==1)
+    {
+        return 1;
+    }
+    else
+    {
+       if (n%i==0)
+       {
+         return 0;
+       }
+       else
+       {
+         return prime(n,i-1);
+       }
+    }
 }
